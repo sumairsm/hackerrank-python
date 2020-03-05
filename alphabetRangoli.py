@@ -10,13 +10,14 @@ def print_rangoli(size):
         print(finalPrint)
 
     for i in range(1, n):
-        alphabets.append(chr(65+i).lower().center(0))
+        del alphabets[n-i:]
         lines = '-' * int(i *2)
         alphabetsLeft = '-'.join(alphabets)
         alphabetsRight = '-'.join(reversed(alphabets))
         final = [lines, alphabetsLeft.strip(), alphabetsRight[1:].strip(), lines]
         finalPrint = ''.join(final).strip('')
         print(finalPrint)
+
 
 
 if __name__ == '__main__':
