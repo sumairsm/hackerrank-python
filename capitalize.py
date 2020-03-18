@@ -6,24 +6,23 @@ import random
 import re
 import sys
 
+
 # Complete the solve function below.
 def solve(s):
-    s.split()
-    c = []
-    for i in s:
-        c.append(i[0].upper())
-        c.append(i[1:])
+    t = []
+    for i in s.split():
+        t = s.replace(s[0], s[0].upper())
 
-    return ' '.join(c)
+    return ''.join(t)
+
 
 if __name__ == '__main__':
-  #  fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
 
     result = solve(s)
     print(result)
+    # fptr.write(result + '\n')
 
-#    fptr.write(result + '\n')
-
- #   fptr.close()
+    # fptr.close()
